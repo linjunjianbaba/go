@@ -11,5 +11,11 @@ func main() {
 
 	const b = 11.2 //不能使用:=
 	fmt.Printf("b type is %T\n", b)
-	fmt.Printf("b = ", b)
+	fmt.Printf("b = %v", b)
 }
+
+/*
+a = 10
+b type is float64
+b = 11.2
+*/

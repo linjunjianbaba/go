@@ -30,3 +30,10 @@ func main() {
 	fmt.Printf("i = %d, j1 =%d, j2 = %d, j3 = %d k = %d\n", i, j1, j2, j3, k)
 
 }
+
+/*
+a = 0, b = 1, c = 2
+d = 0
+a1 = 0, b1 = 1, c1 = 2
+i = 0, j1 =1, j2 = 1, j3 = 1 k = 2
+*/

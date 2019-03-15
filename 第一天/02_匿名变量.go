@@ -27,3 +27,11 @@ func main() {
 	_, f, _ = test()
 	fmt.Printf("f = %d\n", f)
 }
+
+/*
+a = 30
+b =  20
+b =  40
+e = 1, f = 2, g = 3
+f = 2
+*/

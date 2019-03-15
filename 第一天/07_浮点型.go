@@ -114,3 +114,23 @@ func main() {
 	fmt.Printf("姓名: %v ,密码: %v\n", xing, mima)
 
 }
+
+/*
+f = 3.156
+f1 is type float64
+ch =  97
+a, 97
+a, 97
+大写: 65, 小写: 97
+大写转小写: a
+小写转大写: A
+str1 = abc
+str2类型是: string
+len(str2) =  4
+zh =  97
+str =  a
+str[0] = h, str[2] = l
+t =  (2.1+3.14i)
+t2 is type complex128
+real(t2) = 2.5 , imag(t2) = 3.56
+*/

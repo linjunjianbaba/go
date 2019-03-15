@@ -15,3 +15,10 @@ func main() {
 	fmt.Println("c = ", c)
 
 }
+
+/*
+a =  false
+a =  true
+b = false
+c =  false
+*/

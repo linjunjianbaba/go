@@ -28,3 +28,10 @@ func main() {
 	fmt.Println("i = ", i)
 	fmt.Println("j = ", j)
 }
+
+/*
+a =  10
+b = 2.99
+i =  10
+j =  1.33
+*/

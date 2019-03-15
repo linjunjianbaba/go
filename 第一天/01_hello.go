@@ -8,3 +8,8 @@ func main() {
 	a := 5
 	fmt.Printf("a type is %T\n", a)
 }
+
+/*
+hello word
+a type is int
+*/
