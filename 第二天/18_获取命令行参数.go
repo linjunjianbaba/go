@@ -14,3 +14,9 @@ func main() {
 		fmt.Printf("list[%d] = %s\n", i, list[i])
 	}
 }
+
+/*
+n = 1
+list[0] = C:\Users\bill\AppData\Local\Temp\go-build557886074\b001\exe\18_获取命令行参数.exe
+
+*/

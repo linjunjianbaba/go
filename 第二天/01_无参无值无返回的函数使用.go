@@ -26,7 +26,7 @@ func MyFunc1(a int) {
 
 //2
 func MyFunc2(a int, b int) { //等同于a, b int
-	fmt.Printf("a =% d, b = %d\n", a, b)
+	fmt.Printf("a =%d, b = %d\n", a, b)
 }
 func main() {
 	//有参无返回值函数调用：函数名（所需参数）

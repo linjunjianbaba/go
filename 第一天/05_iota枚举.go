@@ -11,7 +11,7 @@ func main() {
 		c = iota //2
 	)
 	fmt.Printf("a = %d, b = %d, c = %d\n", a, b, c)
-	//3.ista云间const，重置为0
+	//3.iota中间const，重置为0
 	const d = iota
 	fmt.Printf("d = %d\n", d)
 	//4.可以只写一个iota
