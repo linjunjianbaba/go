@@ -1,0 +1,32 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: pro-gateway
+  namespace: istio-system
+spec:
+  selector:
+    istio: ingressgateway # use Istio default gateway implementation
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "*"
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: pro
+  namespace: istio-system
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - pro-gateway    #VirtualService对应的Gateway
+  http:
+    route:
+    - destination:
+        port:
+          number: 9090
+        host: prometheus

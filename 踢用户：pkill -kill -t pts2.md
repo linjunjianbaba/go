@@ -1,0 +1,1 @@
+踢用户：pkill -kill -t pts/2

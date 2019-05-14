@@ -1,0 +1,77 @@
+---
+# Source: php-fpm/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: php-php-fpm
+  labels:
+    app.kubernetes.io/name: php-fpm
+    helm.sh/chart: php-fpm-0.1.0
+    app.kubernetes.io/instance: php
+    app.kubernetes.io/managed-by: Tiller
+spec:
+  clusterIP: 10.96.0.214
+  ports:
+    - port: 9000
+      targetPort: 9000
+      protocol: TCP
+      name: php
+  selector:
+    app.kubernetes.io/name: php-fpm
+    app.kubernetes.io/instance: php
+
+---
+# Source: php-fpm/templates/deployment.yaml
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: php-php-fpm
+  labels:
+    app.kubernetes.io/name: php-fpm
+    helm.sh/chart: php-fpm-0.1.0
+    app.kubernetes.io/instance: php
+    app.kubernetes.io/managed-by: Tiller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: php-fpm
+      app.kubernetes.io/instance: php
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: php-fpm
+        app.kubernetes.io/instance: php
+    spec:
+      containers:
+        - name: php-fpm
+          image: "amazeeio/centos7-php:7.2"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: php
+              containerPort: 9000
+              protocol: TCP
+#          livenessProbe:
+#            httpGet:
+#              path: /
+#              port: php
+#          readinessProbe:
+#            httpGet:
+#              path: /
+#              port: php
+          volumeMounts:
+            - name: web
+              mountPath: /usr/share/nginx/html
+      volumes:
+        - name: web
+          hostPath:
+            path: /data/www 
+      tolerations:
+        - effect: NoSchedule
+          key: node-role.kubernetes.io/master
+        
+
+---
+# Source: php-fpm/templates/ingress.yaml
+
+

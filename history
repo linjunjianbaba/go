@@ -1,0 +1,1000 @@
+istioctl kube-inject -f istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml
+istioctl kube-inject -f istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml > test.yaml
+vim test.yaml 
+istioctl pc endpoint
+cd istio-1.0.6/
+ls
+cat samples/bookinfo/networking/destination-rule-all.yaml
+istioctl get destinationrule
+istioctl get destinationrule --all-namespaces 
+istioctl get virtualservice bookinfo
+history 
+istioctl delete -n default -f istio-1.0.6/samples/bookinfo/networking/bookinfo-gateway.yaml
+istioctl delete -n default -f samples/bookinfo/networking/bookinfo-gateway.yaml
+kubectl delete -n default -f <(istioctl kube-inject -f samples/bookinfo/platform/kube/bookinfo.yaml)
+kubectl get pods
+cd 
+ls
+cd istio-1.0.6/
+ls
+find / -name httpbin*
+cd samples/httpbin/
+ls
+kubectl delete -f httpbin.yaml 
+cd ..
+ls
+cd bookinfo/
+ls
+cd platform/
+ls
+cd kube/
+ls
+kubectl apply -f bookinfo.yaml 
+history 
+cd 
+cd istio-1.0.6/
+kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
+kubectl get svc -n istio-system
+istioctl get ingressgateway
+istioctl get virtualservice bookinfo
+ kubectl api-versions | grep admissionregistration
+kubectl get cm istio-sidecar-injector -nistio-system
+kubectl edit cm istio-sidecar-injector -nistio-system
+kubectl get namespace -L istio-injection
+kubectl label namespace default istio-injection=enabled
+kubectl get namespace -L istio-injection
+vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+kubectl get pods --all-namespaces -o wide
+systemctl status kubelet
+kubectl get pods --all-namespaces -o wide
+tail -f /var/log/messages
+netstat -tnpl
+vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+netstat -tnpl
+vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+netstat -tnpl
+kubectl get pods --all-namespaces -o wide
+tail -f /var/log/messages
+kubectl get pods --all-namespaces -o wide
+reboot
+kubectl get pods --all-namespaces -o wide
+ss -tnl
+vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+ss -tnl
+tail -f /var/log/messages
+vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+kubectl api-versions | grep admissionregistration
+vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+tail -f /var/log/messages
+kubectl get pods 
+kubectl api-versions | grep admissionregistration
+vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+kubectl get pods 
+tail -f /var/log/messages
+vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+tail -f /var/log/messages
+kubectl get pods 
+vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+kubectl get pods 
+vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+kubectl get pods 
+tail -f /var/log/messages
+kubectl get pods 
+vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+kubectl get pods 
+tail -f /var/log/messages
+kubectl get pods 
+history 
+vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+kubectl delete -f istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml 
+kubectl delete -f samples/bookinfo/networking/bookinfo-gateway.yaml
+kubectl delete -f istio-1.0.6/samples/bookinfo/networking/bookinfo-gateway.yaml
+kubectl apply -f istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml 
+kubectl apply -f istio-1.0.6/samples/bookinfo/networking/bookinfo-gateway.yaml
+kubectl get svc -n istio-system
+ls
+kubectl get namespace -L istio-injection
+kubectl edit cm istio-sidecar-injector -nistio-system
+history 
+kubectl delete -f istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml 
+kubectl delete -f istio-1.0.6/samples/bookinfo/networking/bookinfo-gateway.yaml
+kubectl apply -n default -f <(istioctl kube-inject -f istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml)
+istioctl create -n default -f istio-1.0.6/samples/bookinfo/networking/bookinfo-gateway.yaml
+istioctl delete -n default -f istio-1.0.6/samples/bookinfo/networking/bookinfo-gateway.yaml
+kubectl apply -f istio-1.0.6/samples/bookinfo/networking/bookinfo-gateway.yaml
+kubectl describe configmap istio-sidecar-injector -n istio-system
+find / -name mutatingwebhook.yaml
+kubectl get MutatingWebhookConfiguration -n istio-system
+kubectl delete -n default -f <(istioctl kube-inject -f istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml)
+kubectl apply -n default -f istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml
+kubectl get deployment reviews-v1 -o wide
+kubectl delete -n default -f istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml
+kubectl apply -n default -f <(istioctl kube-inject -f istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml)
+kubectl get deployment reviews-v1 -o wide
+ls
+vim istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml
+kubectl delete -n default -f <(istioctl kube-inject -f istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml)
+kubectl apply -n default -f istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml
+kubectl get deployment reviews-v1 -o wide
+ls
+cd istio-1.0.6/
+ls
+cd install/
+ls
+cd kubernetes/
+ls
+cd helm/
+ls
+cd istio
+ls
+vim values.yaml 
+ls
+cd ..
+ls
+cd samples/
+ls
+cd sleep/
+ls
+vim sleep.yaml 
+kubectl get ns -L
+kubectl get ns -l
+kubectl get ns -L istio-injection
+reboot
+kubectl get ns -L istio-injection
+kubectl get pods 
+kubectl get pods ratings-v1-55c7cd5656-ns6b2 -o wide
+history 
+kubectl get deployment reviews-v1 -o wide
+kubectl get pods -n kube-system
+kubectl logs kube-proxy-wpckw -n kube-systm
+kubectl logs kube-proxy-wpckw -n kube-system
+istioctl get MutatingWebhookConfiguration -n istio-system
+istioctl get virtualservice bookinfo
+istioctl get virtualservices
+history 
+kubectl edit cm istio-sidecar-injector -nistio-system
+kubectl edit deployment istio-sidecar-injector -nistio-system
+kubectl edit MutatingWebhookConfiguration istio-sidecar-injector -nistio-system
+kubectl get pods -n kube-system
+kubectl get pods
+kubectl get ValidatingWebhookConfiguration
+kubectl get pods -n kube-system
+kubectl exec -it kube-apiserver-mastar01 -n kube-system -- sh
+vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+kubectl exec -it kube-apiserver-mastar01 -n kube-system -- sh
+kubectl get ns -L istio-injection
+kubectl get deployment reviews-v1 -o wide
+vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+kubectl get deployment reviews-v1 -o wide
+tail -f /var/log/messages
+kubectl get customresourcedefinition|grep istio.io
+kubectl get customresourcedefinition|grep istio.io |grep meshpolicies.authentication.istio.io
+kubectl get customresourcedefinition|grep istio.io |grep policies.authentication.istio.io
+history 
+kubectl get deployment reviews-v1 -o wide
+kubectl describe cm istio-sidecar-injector -n istio-system
+kubectl get namespace -L istio-injection
+vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+kubectl get namespace -L istio-injection
+vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+kubectl get namespace -L istio-injection
+tail -f /var/log/messages
+kubectl api-versions | grep admissionregistration
+kubectl describe MutatingWebhookConfiguration istio-sidecar-injector -n istio-system
+ kubectl get pods -n istio-system | grep istio-sidecar
+kubectl logs istio-sidecar-injector-5d8dd9448d-fz9nr -n istio-system
+kubectl logs -f istio-sidecar-injector-5d8dd9448d-fz9nr -n istio-system
+vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+kubectl logs -f istio-sidecar-injector-5d8dd9448d-fz9nr -n istio-system
+cd /tmp
+vim nginx-gateway.yaml 
+history 
+kubectl delete -n default -f istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml
+kubectl delete -n default -f /root/istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml
+kubectl delete -f /root/istio-1.0.6/samples/bookinfo/networking/bookinfo-gateway.yaml
+vim httpbin-gateway.yaml 
+kubectl apply -f httpbin-gateway.yaml 
+curl -I 127.0.0.1:31380/status/200
+
+curl -I 10.30.222.36:31380/status/200
+curl -I 10.30.222.36:31380/headers
+vim httpbin-gateway.yaml 
+kubectl apply -f httpbin-gateway.yaml 
+vim httpbin-gateway.yaml 
+kubectl apply -f httpbin-gateway.yaml 
+vim httpbin-gateway.yaml 
+curl -v --resolve yunzg.com:10.30.222.36:31380 --cacert tls.pem https://yunfuzg.com:31390/status/418
+istioctl delete gateway httpbin-gateway
+kubectl delete -f httpbin-gateway.yaml 
+istioctl delete gateway httpbin-gateway
+kubectl delete --ignore-not-found=true -n istio-system secret istio-ingressgateway-certs istio-ingressgateway-ca-certs
+cd /root/istio-1.0.6/samples/sleep/
+ls
+vim sleep.yaml 
+kubectl apply -f sleep.yaml 
+kubectl delete -f sleep.yaml 
+ls
+helm ls
+cd 
+ls
+helm delete honking-chipmunk
+helm delete brown-seastar
+helm delete istio
+helm ls
+kubectl get svc
+kubectl get ns
+kubectl get pods -n istio-system
+kubectl get pods --all-namespaces -o wide
+kubectl delete -f /tmp/httpbin-gateway.yaml 
+history 
+kubectl get pods --all-namespaces -o wide
+ls
+cd ingress-nginx/
+ls
+cd deploy/
+ls
+kubectl delete -f ./
+kubectl delete -f grafana/
+kubectl delete -f monitoring/
+kubectl delete -f provider/
+kubectl get pods --all-namespaces -o wide
+kubectl top nodes
+cd 
+cd istio-1.0.6/install/kubernetes/
+ls
+cd ht
+cd helm/
+ls
+cd istio
+ls
+vim values-istio-gateways.yaml 
+vim values.yaml 
+cd templates/
+ls
+vim install-custom-resources.sh.tpl 
+cd ..
+ls
+cd charts/
+ls
+cd gateways/
+ls
+cd templates/
+ls
+vim service.yaml 
+ls
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+vim values-istio-gateways.yaml 
+vim requirements.yaml 
+vim values-istio.yaml 
+vim values-istio-demo.yaml 
+hsi
+history 
+history |grep helm insta
+kubectl get ns -L istio-injection
+kubectl get deployment reviews-v1 -o wide
+vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+kubectl get deployment reviews-v1 -o wide
+tail -f /var/log/messages
+kubectl get customresourcedefinition|grep istio.io
+kubectl get customresourcedefinition|grep istio.io |grep meshpolicies.authentication.istio.io
+kubectl get customresourcedefinition|grep istio.io |grep policies.authentication.istio.io
+history 
+kubectl get deployment reviews-v1 -o wide
+kubectl describe cm istio-sidecar-injector -n istio-system
+kubectl get namespace -L istio-injection
+vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+kubectl get namespace -L istio-injection
+vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+kubectl get namespace -L istio-injection
+tail -f /var/log/messages
+kubectl api-versions | grep admissionregistration
+kubectl describe MutatingWebhookConfiguration istio-sidecar-injector -n istio-system
+ kubectl get pods -n istio-system | grep istio-sidecar
+kubectl logs istio-sidecar-injector-5d8dd9448d-fz9nr -n istio-system
+kubectl logs -f istio-sidecar-injector-5d8dd9448d-fz9nr -n istio-system
+vim /etc/kubernetes/manifests/kube-apiserver.yaml 
+kubectl logs -f istio-sidecar-injector-5d8dd9448d-fz9nr -n istio-system
+cd /tmp
+vim nginx-gateway.yaml 
+history 
+kubectl delete -n default -f istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml
+kubectl delete -n default -f /root/istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml
+kubectl delete -f /root/istio-1.0.6/samples/bookinfo/networking/bookinfo-gateway.yaml
+vim httpbin-gateway.yaml 
+kubectl apply -f httpbin-gateway.yaml 
+curl -I 127.0.0.1:31380/status/200
+
+curl -I 10.30.222.36:31380/status/200
+curl -I 10.30.222.36:31380/headers
+vim httpbin-gateway.yaml 
+kubectl apply -f httpbin-gateway.yaml 
+vim httpbin-gateway.yaml 
+kubectl apply -f httpbin-gateway.yaml 
+vim httpbin-gateway.yaml 
+curl -v --resolve yunzg.com:10.30.222.36:31380 --cacert tls.pem https://yunfuzg.com:31390/status/418
+istioctl delete gateway httpbin-gateway
+kubectl delete -f httpbin-gateway.yaml 
+istioctl delete gateway httpbin-gateway
+kubectl delete --ignore-not-found=true -n istio-system secret istio-ingressgateway-certs istio-ingressgateway-ca-certs
+cd /root/istio-1.0.6/samples/sleep/
+ls
+vim sleep.yaml 
+kubectl apply -f sleep.yaml 
+kubectl delete -f sleep.yaml 
+ls
+helm ls
+cd 
+ls
+helm delete honking-chipmunk
+helm delete brown-seastar
+helm delete istio
+helm ls
+kubectl get svc
+kubectl get ns
+kubectl get pods -n istio-system
+kubectl get pods --all-namespaces -o wide
+kubectl delete -f /tmp/httpbin-gateway.yaml 
+history 
+kubectl get pods --all-namespaces -o wide
+ls
+cd ingress-nginx/
+ls
+cd deploy/
+ls
+kubectl delete -f ./
+kubectl delete -f grafana/
+kubectl delete -f monitoring/
+kubectl delete -f provider/
+kubectl get pods --all-namespaces -o wide
+kubectl top nodes
+cd 
+cd istio-1.0.6/install/kubernetes/
+ls
+cd ht
+cd helm/
+ls
+cd istio
+ls
+vim values-istio-gateways.yaml 
+vim values.yaml 
+cd templates/
+ls
+vim install-custom-resources.sh.tpl 
+cd ..
+ls
+cd charts/
+ls
+cd gateways/
+ls
+cd templates/
+ls
+vim service.yaml 
+ls
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+vim values-istio-gateways.yaml 
+vim requirements.yaml 
+vim values-istio.yaml 
+vim values-istio-demo.yaml 
+hsi
+history 
+history |grep helm insta
+history |grep helm
+ls
+cd 
+cd istio-1.0.6/
+ls
+helm install install/kubernetes/helm/istio --name istio --namespace istio-system
+kubectl delete ns istio-system
+helm install install/kubernetes/helm/istio --name istio --namespace istio-system
+kubectl get pods --all-namespaces -o wide
+helm del --purge istio
+helm install install/kubernetes/helm/istio --name istio --namespace istio-system
+kubectl api-versions
+kubectl delete -f $HOME/istio.yaml
+helm delete --purge istio
+ kubectl -n istio-system delete job --all
+helm template install/kubernetes/helm/istio --name istio --namespace istio-system > $HOME/istio.yaml
+kubectl delete -f $HOME/istio.yaml
+ls
+vim 
+cd 
+ls
+vim istio.yaml 
+kubectl apply -f istio.yaml 
+kubectl get pods --all-namespaces -o wide
+kubectl describe pods istio-cleanup-secrets-qh6np -n istio-system
+kubectl get pods --all-namespaces -o wide
+kubectl describe pods istio-security-post-install-sb9gt -n istio-system
+kubectl get pods --all-namespaces -o wide
+kubectl logs istio-security-post-install-sb9gt -n istio-system
+kubectl get svc -n istio-system
+netstat -tnpl
+vim myapp.yaml 
+kubectl apply -f myapp.yaml 
+cd /tmp
+ls
+cp httpbin-gateway.yaml myapp-gateway.yaml
+vim myapp-gateway.yaml 
+kubectl apply -f myapp-gateway.yaml 
+vim myapp-gateway.yaml 
+kubectl apply -f myapp-gateway.yaml 
+vim myapp-gateway.yaml 
+kubectl apply -f myapp-gateway.yaml 
+cd 
+ls
+cp myapp.yaml /tmp/myapp2.yaml 
+cd /tmp
+ls
+vim myapp2.yaml 
+kubectl apply -f myapp2.yaml 
+cp myapp-gateway.yaml myapp2-gateway.yaml 
+vim myapp2-gateway.yaml 
+kubectl apply -f myapp2-gateway.yaml 
+vim myapp2.yaml 
+kubectl apply -f myapp2-gateway.yaml 
+kubectl apply -f myapp2.yaml 
+ls
+vim myapp-gateway.yaml 
+kubectl apply -f myapp-gateway.yaml 
+vim myapp-gateway.yaml 
+kubectl apply -f myapp-gateway.yaml 
+kubectl create secret tls -n istio-system istio-ingressgateway-certs --key ./tls.key --cert ./tls.pem 
+vim myapp-gateway.yaml 
+kubectl apply -f myapp-gateway.yaml 
+vim myapp-gateway.yaml 
+kubectl apply -f myapp-gateway.yaml 
+kubectl exec -it -n istio-system $(kubectl -n istio-system get pods -l istio=ingressgateway -o jsonpath='{.items[0].metadata.name}') -- ls -al /etc/istio/ingressgateway-certs
+kubectl -n istio-system get pods -l istio=ingressgateway -o jsonpath='{.items[0].metadata.name}'
+kubectl exec -i -n istio-system $(kubectl get pod -l istio=ingressgateway -n istio-system -o jsonpath='{.items[0].metadata.name}')  -- cat /etc/istio/ingressgateway-certs/tls.crt | openssl x509 -text -noout | grep 'Subject:'
+ kubectl exec -ti $(kubectl get po -l istio=ingressgateway -n istio-system -o jsonpath={.items[0]..metadata.name}) -n istio-system -- curl  127.0.0.1:15000/certs
+kubectl logs -n istio-system -l istio=ingressgateway
+kubectl exec -it -n istio-system $(kubectl -n istio-system get pods -l istio=ingressgateway -o jsonpath='{.items[0].metadata.name}') -- sh
+ls
+vim myapp-gateway.yaml 
+kubectl apply -f myapp-gateway.yaml 
+kubectl logs -n istio-system -l istio=ingressgateway
+kubectl exec -it -n istio-system $(kubectl -n istio-system get pods -l istio=ingressgateway -o jsonpath='{.items[0].metadata.name}') -- sh
+vim myapp-gateway.yaml 
+kubectl apply -f myapp-gateway.yaml 
+kubectl logs -n istio-system -l istio=ingressgateway
+ls
+kubectl delete myapp2.yaml 
+kubectl delete -f myapp2.yaml 
+kubectl delete -f myapp2-gateway.yaml 
+helm template /root/helm/nginx --name nginx --namespace default > $HOME/nginx.yaml
+helm template /root/helm/nginx --name nginx --namespace default > /tmp/nginx.yaml
+helm template /root/helm/php --name php --namespace default > /tmp/php-pfm2.yaml
+helm template /root/helm/php-fpm --name php --namespace default > /tmp/php-fpm.yaml
+
+cat php-fpm.yaml 
+cat nginx.yaml 
+vim nginx.yaml 
+kubectl apply -f php-fpm.yaml 
+vim nginx.yaml 
+vim php-fpm.yaml 
+kubectl apply -f php-fpm.yaml 
+kubectl apply -f nginx.yaml 
+vim nginx.yaml 
+kubectl apply -f nginx.yaml 
+kubectl get svc
+kubectl get pods --all-namespaces 
+kubectl get pods nginx-79c5649d78-9jgbf -o wide
+kubectl get deploy
+kubectl get deploy nginx -o wide
+vim myapp-gateway.yaml 
+vim nginx-gateway.yaml
+kubectl delete myapp-gateway.yaml 
+kubectl delete -f myapp-gateway.yaml 
+kubectl apply -f nginx-gateway.yaml 
+ls
+cp nginx-gateway.yaml nginx1-gateway.yaml 
+vim nginx1-gateway.yaml 
+kubectl apply -f nginx1-gateway.yaml 
+vim nginx1-gateway.yaml 
+kubectl apply -f nginx1-gateway.yaml 
+vim nginx1-gateway.yaml 
+kubectl apply -f nginx1-gateway.yaml 
+vim nginx1-gateway.yaml 
+kubectl apply -f nginx1-gateway.yaml 
+vim nginx1-gateway.yaml 
+kubectl apply -f nginx1-gateway.yaml 
+vim nginx1-gateway.yaml 
+kubectl apply -f nginx1-gateway.yaml 
+history 
+vim nginx-gateway.yaml 
+history 
+kubectl get deployment reviews-v1 -o wide
+kubectl get deployment reviews-v2 -o wide
+kubectl get deployment reviews-v1 -o wide
+kubectl delete -n default -f istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml
+kubectl apply -n default -f istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml
+kubectl get deployment reviews-v1 -o wide
+kubectl delete -n default -f istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml
+kubectl apply -n default -f istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml
+kubectl delete -n default -f istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml
+kubectl apply -n default -f istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml
+kubectl get deploy
+kubectl get deployment ratings-v1 -o wide
+kubectl delete -n default -f istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml
+kubectl apply -n default -f istio-1.0.6/samples/bookinfo/platform/kube/bookinfo.yaml
+cd istio-1.0.6/samples/bookinfo/
+ls
+cd networking/
+s
+ls
+vim destination-rule-all.yaml 
+vim bookinfo-gateway.yaml 
+ls
+cp bookinfo-gateway.yaml /tmp/
+cd /tmp
+ls
+vim bookinfo-gateway.yaml 
+mv bookinfo-gateway.yaml nginx-gateway.yaml 
+rz -E
+ls
+unzip 1612881_yunfuzg.com_nginx.zip 
+ls
+mv 1612881_yunfuzg.com.pem tls.pem
+mv 1612881_yunfuzg.com.key tls.key
+vim nginx-gateway.yaml 
+kubectl apply -f nginx-gateway.yaml 
+kubectl delete -f nginx-gateway.yaml 
+vim nginx-gateway.yaml 
+kubectl get svc
+vim nginx-gateway.yaml 
+kubectl delete -f nginx-gateway.yaml 
+kubectl apply -f nginx-gateway.yaml 
+kubectl get gateway
+kubectl get virtualservice
+vim nginx-gateway.yaml 
+kubectl get svc -n istio-system
+kubectl get svc
+kubectl get svc -n naftis
+kubectl delete -f nginx-gateway.yaml 
+kubectl apply -f /root/istio-1.0.6/samples/httpbin/httpbin.yaml
+kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}'
+kubectl -n istio-system get service istio-ingressgateway
+kubectl -n istio-system get service istio-ingressgateway -o yaml
+kubectl -n istio-system get service istio-ingressgateway -o json
+kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.clusterIP.ingress[0].ip}'
+kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.clusterIP[0].ip}'
+vim /root/istio-1.0.6/samples/httpbin/httpbin.yaml
+vim nginx-gateway.yaml 
+vim httpbin-gateway.yaml
+kubectl apply -f httpbin-gateway.yaml 
+vim httpbin-gateway.yaml
+kubectl apply -f httpbin-gateway.yaml 
+
+history 
+kubectl delete -f /root/istio-1.0.6/samples/httpbin/httpbin.yaml
+kubectl get pods -n istio-system
+kubectl logs istio-sidecar-injector-5d8dd9448d-znjts -n istio-system
+kubectl logs -f istio-sidecar-injector-5d8dd9448d-znjts -n istio-system
+cd /tmp
+ls
+vim nginx-gateway.yaml 
+cd /tmp
+ls
+ls -a
+rm -f .nginx-gateway.yaml.swp 
+vim nginx-gateway.yaml 
+cd 
+vim myapp.yaml 
+kubectl delete -f myapp.yaml 
+vim myapp.yaml 
+vim nginx.yaml 
+vim myapp.yaml 
+cd /tmp
+ls
+vim nginx.yaml 
+kubectl apply -f /root/myapp.yaml 
+vim myapp.yaml 
+kubectl apply -f /root/myapp.yaml 
+vim myapp.yaml 
+vim nginx.yaml 
+kubectl apply -f /root/myapp.yaml 
+kubectl delete -f /root/myapp.yaml 
+kubectl apply -f /root/myapp.yaml 
+istioctl get clusters
+istioctl proxy-config clusters
+kubectl gat pods 
+kubectl get pods 
+istioctl proxy-config clusters nginx-79c5649d78-9jgbf
+istioctl proxy-config clusters nginx-79c5649d78-9jgb |grep nainx
+istioctl proxy-config clusters nginx-79c5649d78-9jgbf |grep nainx
+istioctl proxy-config clusters nginx-79c5649d78-9jgbf |grep nginx
+istioctl proxy-config listeners nginx-79c5649d78-9jgbf
+istioctl proxy-config route
+istioctl proxy-config route nginx-79c5649d78-9jgbf
+vim myapp.yaml 
+top
+ls
+rz -E
+ls
+rz -E
+ls
+tar xf jdk-8u201-linux-x64.tar.gz && mv jdk1.8.0_201 /usr/local/java
+vi /etc/profile
+source /etc/profile
+cd /usr/local/java/
+ls
+cd bin/
+ls
+vi /etc/profile
+source /etc/profile
+java -version
+ls
+java -version
+cd 
+ls
+df -h
+ls
+rz -E
+ls
+tar xf apache-tomcat-8.5.38.tar.gz 
+ls
+mv apache-tomcat-8.5.38 /usr/local/tomcat
+cd /usr/local/tomcat/
+rz -E
+ls
+mv *.gz /tmp
+cd /tmp
+ls
+tar xf apr-1.6.5.tar.gz 
+tar xf apr-iconv-1.2.2.tar.gz && tar xf apr-util-1.6.1.tar.gz
+cd apr-1.6.5
+./configure --prefix=/usr/local/apr
+make
+make install
+cd ../apr-iconv-1.2.2
+./configure --prefix=/usr/local/apr-iconv --with-apr=/usr/local/apr
+make
+make install
+cd ../apr-util-1.6.1
+./configure --prefix=/usr/local/apr-util --with-apr=/usr/local/apr --with-apr-iconv=/usr/local/apr-iconv/bin/apriconv
+make
+yum -y install cmake gcc expat-devel
+make
+make install
+cd /usr/local/tomcat/bin/tomcat-native-1.2.21-src/native
+cd /usr/local/tomcat/bin
+tar xf tomcat-native.tar.gz 
+cd tomcat-native-1.2.21-src/native
+./configure --with-apr=/usr/local/apr --with-java-home=/usr/local/java
+make 4
+make
+make install
+vim /etc/profile
+source /etc/profile
+ifconfig
+cd 
+cd /usr/local/tomcat/
+ls
+cd bin/
+ls
+mv catalina.sh catalina.shbak
+rz -E
+cd ..
+cd conf/
+vim server.xml 
+mv server.xml server.xmlbak
+rz -E
+ls
+cd ../webapps/
+ls
+rm -rf *
+ls
+useradd tomcat
+cd
+chown -R tomcat.tomcat /usr/local/tomcat
+su tomcat
+cd /usr/local/tomcat
+cd bin/
+chmod +x catalina.sh
+ls
+su tomcat
+history 
+ls
+cd 
+ls
+cd go/
+ls
+cdb
+cd bin/
+ls
+./hey --help
+./hey -n 100000 -c 100 -q 100 http://10.30.222.36:8080
+./hey -n 1000000 -c 1000 -q 1000 http://10.30.222.36:8080
+./hey -n 1000000 -c 1000 -q 100 http://10.29.216.194:8080
+./hey -n 1000000 -c 1000 -q 1000 http://10.29.216.194:8080
+./hey -n 10000000 -c 1000 -q 10000 http://10.29.216.194:8080
+./hey -n 10000000 -c 1000 -q 10000 https://wechat.sibumbg.cn/index.html
+cd 
+ls
+scp apache-tomcat-8.5.38.tar.gz 10.80.244.133:/tmp
+scp jdk-8u201-linux-x64.tar.gz 10.80.244.133:/tmp
+cd /tmp
+ls
+vim nginx1-gateway.yaml 
+ls
+cd istio-1.0.6/
+ls
+kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml
+istioctl get gateway
+istioctl delete gateway nginx1-gateway
+istioctl get gateway
+kubectl get svc
+vim samples/bookinfo/networking/bookinfo-gateway.yaml
+kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
+vim samples/bookinfo/networking/bookinfo-gateway.yaml
+istioctl get virtualservices -o yaml
+cd /tmp
+ls
+kubectl delete -f nginx1-gateway.yaml 
+cd -
+kubectl delete -f samples/bookinfo/networking/bookinfo-gateway.yaml
+cat samples/bookinfo/networking/destination-rule-all.yaml
+istioctl get destinationRule
+kubectl apply -f samples/bookinfo/networking/bookinfo-gateway.yaml
+kubectl apply -f samples/bookinfo/networking/destination-rule-all.yaml
+istioctl get virtualservice -o yaml
+istioctl get DestinationRule -o yaml
+kubectl delete -f samples/bookinfo/networking/destination-rule-all.yaml
+istioctl create -f samples/bookinfo/networking/destination-rule-all.yaml
+cat samples/bookinfo/networking/virtual-service-all-v1.yaml
+ istioctl create -f samples/bookinfo/networking/virtual-service-all-v1.yaml
+istioctl get virtaulservice -o yaml
+istioctl get virtualservice -o yaml
+cat samples/bookinfo/networking/virtual-service-reviews-test-v2.yaml
+istioctl create -f samples/bookinfo/networking/virtual-service-reviews-test-v2.yaml
+istioctl get destinationrules -o yaml
+istioctl replace -f samples/bookinfo/networking/virtual-service-reviews-test-v2.yaml
+istioctl get virtualservice reviews -o yaml
+istioctl get virtualservice  -o yaml
+istioctl get gateway  -o yaml
+istioctl get gateway  bookinfo -o yaml
+istioctl get gateway  nginx-gateway -o yaml
+kubectl get pods --all-namespaces -o wide
+ls
+vim myapp.yaml 
+istioctl get destinationrules -o yaml
+cd istio-1.0.6/
+cat samples/bookinfo/networking/virtual-service-ratings-test-delay.yaml
+cd /tmp
+vim nginx-gateway.yaml 
+istioctl get VirtualService -o yaml
+istioctl get DestinationRule -o yaml
+ls
+vim myapp2.yaml 
+kubectl apply -f myapp2.yaml 
+vim myapp2-gateway.yaml 
+kubectl apply -f myapp2-gateway.yaml 
+vim myapp2-gateway.yaml 
+istioctl replace -f myapp2-gateway.yaml 
+vim myapp2-gateway.yaml 
+istioctl delete -f myapp2-gateway.yaml 
+vim myapp2-gateway.yaml 
+kubectl apply -f myapp2-gateway.yaml 
+vim myapp2-gateway.yaml 
+vim myapp2.yaml 
+kubectl apply -f myapp2.yaml 
+kubectl get pods 
+vim myapp-destinationrule.yaml
+kubectl apply -f myapp-destinationrule.yaml 
+cat /root/istio-1.0.6/samples/bookinfo/networking/destination-rule-all.yaml
+vim myapp-destinationrule.yaml 
+kubectl apply -f myapp-destinationrule.yaml 
+kubectl delete -f myapp-destinationrule.yaml 
+vim myapp-destinationrule.yaml 
+kubectl apply -f myapp-destinationrule.yaml 
+vim myapp2-gateway.yaml 
+kubectl apply -f myapp2-gateway.yaml 
+vim myapp2-gateway.yaml 
+istioctl replace -f myapp2-gateway.yaml 
+vim myapp2-gateway.yaml 
+istioctl get DestinationRule
+istioctl get DestinationRule -o yaml
+istioctl get virtualservice myapp-virtualservice -o yaml
+istioctl get virtualservice myapp-DestinationRule -o yaml
+istioctl get DestinationRule myapp-DestinationRule -o yaml
+istioctl get DestinationRule myapp-destinationrule -o yaml
+vim myapp2-gateway.yaml 
+istioctl delete -f myapp-gateway.yaml 
+istioctl delete -f myapp2-gateway.yaml 
+vim myapp2-gateway.yaml 
+cat /root/istio-1.0.6/samples/bookinfo/networking/destination-rule-all.yaml
+vim myapp-destinationrule.yaml 
+cat /root/istio-1.0.6/samples/bookinfo/networking/virtual-service-all-v1.yaml
+vim myapp2-gateway.yaml 
+kubectl apply -f myapp2-gateway.yaml 
+vim myapp2-gateway.yaml 
+kubectl apply -f myapp2-gateway.yaml 
+vim myapp2-gateway.yaml 
+kubectl apply -f myapp2-gateway.yaml 
+vim myapp2-gateway.yaml 
+kubectl apply -f myapp2-gateway.yaml 
+vim for.sh
+sh for.sh 
+vim for.sh
+sh for.sh 
+vim for.sh
+sh for.sh 
+vim for.sh
+sh for.sh 
+vim for.sh                        
+sh for.sh 
+ls
+vim myapp2.yaml 
+cat myapp2-gateway.yaml 
+ls
+vim myapp-destinationrule.yaml 
+vim myapp2-gateway.yaml 
+getfacl /tmp/
+getfacl /root
+kubectl get svc
+kubectl get pods -n istio-system
+cd istio-1.0.6/
+ls
+kubectl apply -f install/kubernetes/addons/grafana.yaml
+ls
+kubectl get svc -n istio-system
+cd install/kubernetes/addons
+ls
+cd /tmp
+ls
+bim myapp2.yaml 
+vim myapp2-gateway.yaml 
+cp myapp2-gateway.yaml pre-gateway.yaml
+vim pre-gateway.yaml 
+kubectl apply -f pre-gateway.yaml 
+vim pre-gateway.yaml 
+kubectl apply -f pre-gateway.yaml 
+kubectl delete -f pre-gateway.yaml 
+vim pre-gateway.yaml 
+kubectl apply -f pre-gateway.yaml 
+vim pre-gateway.yaml 
+kubectl apply -f pre-gateway.yaml 
+vim pre-gateway.yaml 
+kubectl apply -f pre-gateway.yaml 
+kubectl delete -f pre-gateway.yaml 
+kubectl get svc -n istio-system
+kubectl edit svc prometheus -n istio-system
+kubectl get svc -n istio-system
+cd 
+ls
+vim for.sh
+docker pull liumiaocn/jenkins
+docker tag liumiaocn/jenkins:latest jinkens:1.0.0
+docker rmi liumiaocn/jenkins:latest
+docker images
+docker rmi d8aeee7baacc
+df -h
+ls
+vim jenkins.yaml
+cp myapp.yaml jenkins.yaml
+vim jenkins.yaml 
+kubectl apply -f jenkins.yaml 
+kubectl get pods 
+docker images
+docker tag jinkens:1.0.0 jenkins:1.0.0
+docker rmi jinkens:1.0.0 
+docker images
+kubectl get pods 
+cd /tmp
+ls
+vim myapp2-gateway.yaml 
+vim myapp-destinationrule.yaml 
+kubectl delete -f myapp-destinationrule.yaml 
+kubectl delete -f myapp2-gateway.yaml 
+kubectl delete -f myapp2.yaml 
+kubectl get pods 
+ istioctl get gateway  
+/root/istio-1.0.6/samples/bookinfo/platform/kube/cleanup.sh
+ istioctl get gateway  
+kubectl get pods
+ls
+cim nginx1-gateway.yaml 
+vim nginx1-gateway.yaml 
+vim nginx-gateway.yaml 
+kubectl apply -f nginx-gateway.yaml 
+kubectl get pods
+cp myapp2-gateway.yaml 
+cp myapp2-gateway.yaml jenkins-gateway.yaml 
+vim jenkins-gateway.yaml 
+kubectl apply -f jenkins-gateway.yaml 
+ls
+cd 
+ls
+vim jenkins.yaml 
+kubectl apply -f jenkins.yaml 
+kubectl get pods
+docker pull jenkins/jenkins:lts
+ls
+docker imags
+docker images
+vim myapp.yaml 
+vim jenkins.yaml 
+kubectl apply -f jenkins.yaml 
+kubectl get pods 
+kubectl get pods -w
+kubectl logs jenkins-57f67b7fc7-7txfr
+kubectl logs -c jenkins-57f67b7fc7-7txfr
+kubectl logs deployment jenkins -c  jenkins-57f67b7fc7-7txfr
+kubectl logs jenkins -c  jenkins-57f67b7fc7-7txfr
+kubectl describe pods jenkins-57f67b7fc7-7txfr
+kubectl logs jenkins-57f67b7fc7-7txfr -c jenkins
+kubectl exec -it jenkins-57f67b7fc7-7txfr -c jenkins -- sh
+docker images
+vim jenkins.yaml 
+kubectl apply -f jenkins.yaml 
+kubectl get pods -w
+cd /tmp
+ls
+vm egress.yaml
+vim egress.yaml
+kubectl apply -f egress.yaml 
+vim egress.yaml
+kubectl apply -f egress.yaml 
+vim egress.yaml
+istioctl create -f egress.yaml 
+vim egress.yaml 
+istioctl create -f egress.yaml 
+vim egress.yaml 
+istioctl create -f egress.yaml 
+kubectl delete -f /root/jenkins.yaml 
+kubectl apply -f /root/jenkins.yaml 
+cp egress.yaml 
+cp egress.yaml egress2.yaml 
+vim egress2.yaml 
+kubectl apply -f egress2.yaml 
+vim egress2.yaml egress3.yaml
+kubectl apply -f egress2.yaml 
+docker images 
+vim /root/jenkins.yaml 
+kubectl apply -f /root/jenkins.yaml 
+kubectl get pods
+kubectl logs jenkins-57f67b7fc7-6c6tq -c jenkins
+kubectl logs -f jenkins-57f67b7fc7-6c6tq -c jenkins
+ls
+vim jenkins-gateway.yaml 
+kubectl apply -f jenkins-gateway.yaml 
+istioctl get virtualservice
+vim jenkins-gateway.yaml 
+kubectl apply -f jenkins-gateway.yaml 
+kubectl delete -f /root/jenkins.yaml 
+vim egress.yaml 
+kubectl apply -f /root/jenkins.yaml 
+kubectl get pods
+kubectl logs -f jenkins-57f67b7fc7-tvpjt -c jenkins
+kubectl delete -f /root/jenkins.yaml 
+vim /root/jenkins.yaml 
+kubectl get pods
+kubectl apply -f /root/jenkins.yaml 
+kubectl logs -f jenkins-57f67b7fc7-tvpjt -c jenkins
+kubectl get pods
+kubectl logs -f jenkins-7b879dd75c-dfg8f -c jenkins
+kubectl logs -f jenkins-7b879dd75c-dfg8f -c jenkins 
+kubectl logs -f je
+kubectl logs jenkins-7b879dd75c-dfg8f -c jenkins 
+kubectl logs jenkins-7b879dd75c-dfg8f -c jenkins  > 1
+vim 1
+vim egress.yaml 
+kubectl apply -f egress.yaml 
+istioctl get egress
+istioctl get virtualservices
+vim egress.yaml 
+istioctl get ServiceEntry
+vim https.yaml
+kubectl apply -f https.yaml 
+kubectl get pods 
+kubectl logs jenkins-7b879dd75c-dfg8f -c jenkins
