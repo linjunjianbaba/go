@@ -8,6 +8,24 @@ SET GLOBAL innodb_buffer_pool_size=268435456;
 
 
 
+#  			[mysql主从复制跳过错误](https://www.cnblogs.com/feiyun126/p/6945387.html) 		
+
+
+
+**跳过错误有两种方式：**
+**1.跳过指定数量的事务：**
+mysql>slave stop;
+mysql>SET GLOBAL SQL_SLAVE_SKIP_COUNTER = 1        #跳过一个事务
+mysql>slave start
+
+**2.修改mysql的配置文件，通过slave_skip_errors参数来跳所有错误或指定类型的错误**
+vi /etc/my.cnf
+[mysqld]
+\#slave-skip-errors=1062,1053,1146 #跳过指定error no类型的错误
+\#slave-skip-errors=all #跳过所有错误
+
+
+
 # 查询最高内存占用
 
 使用以下命令可以知道mysql的配置使用多少 RAM
