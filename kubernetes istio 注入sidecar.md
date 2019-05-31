@@ -14,3 +14,4 @@ kubectl label namespace default istio-injection=enabled #添加标签
 kubectl logs -f istio-sidecar-injector -n istio-system #查看sidecar注入是否成功
 ```
 
+istio博客： https://blog.51cto.com/14051317/2344170
