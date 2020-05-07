@@ -27,7 +27,3 @@ go run xxx.go ：不生成程序，直接运行
 自动推导类型：必须初始化，通过初始化的值确定类型：a :=10
 
 zabbix监控redis：https://github.com/adubkov/zbx_redis_template
-
-accesskey：BsBpRuF5sUPLxysV
-
-secret：Ihvc21Pt9ljOleMfJrIuBBzCN5fQNe
